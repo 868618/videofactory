@@ -1,0 +1,1 @@
+const o=require("fs-extra"),n=require("path"),a=require("glob"),{spawnSync:g}=require("child_process"),u=async(e,r,p)=>new Promise((s,t)=>{r&&o.ensureDir(r);const i=n.join(r,p||"img");try{g("pdftoppm",["-png",e,i]),s({list:a.sync(r+"/*.png"),pattern:n.join(r,"*.png")})}catch(c){t(c)}});export{u as default};

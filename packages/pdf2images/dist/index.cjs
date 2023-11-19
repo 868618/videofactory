@@ -1,0 +1,1 @@
+"use strict";const c=require("fs-extra"),n=require("path"),o=require("glob"),{spawnSync:p}=require("child_process"),f=async(e,r,s)=>new Promise((t,i)=>{r&&c.ensureDir(r);const a=n.join(r,s||"img");try{p("pdftoppm",["-png",e,a]),t({list:o.sync(r+"/*.png"),pattern:n.join(r,"*.png")})}catch(u){i(u)}});module.exports=f;

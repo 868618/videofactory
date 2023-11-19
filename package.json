@@ -1,0 +1,76 @@
+{
+  "name": "videofactory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx ts-node -r tsconfig-paths/register --project tsconfig.json ./src/index.ts",
+    "video": "npx ts-node -r tsconfig-paths/register --project tsconfig.json ./src/video.ts",
+    "tmp": "npx ts-node -r tsconfig-paths/register --project tsconfig.json ./src/demo/tmp.ts",
+    "transitions": "npx ts-node -r tsconfig-paths/register --project tsconfig.json ./src/demo/transitions.ts",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "@types/cli-progress": "^3.11.2",
+    "@types/eslint": "^8.44.7",
+    "@types/lodash": "^4.14.198",
+    "@types/node": "^20.6.2",
+    "@types/progress": "^2.0.5",
+    "@types/randomcolor": "^0.5.8",
+    "@types/tinycolor2": "^1.4.5",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "axios": "^1.5.0",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-define-config": "^1.23.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "husky": "^8.0.0",
+    "prettier": "^3.0.3",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@fatpigs/fire": "workspace:^",
+    "@fatpigs/pdf2images": "workspace:^",
+    "@fatpigs/pdf2longpng": "workspace:^",
+    "@fatpigs/pdfcount": "workspace:^",
+    "@fatpigs/png2video": "workspace:^",
+    "@fatpigs/renderpdf": "workspace:^",
+    "@pdf-lib/fontkit": "^1.1.1",
+    "@types/fs-extra": "^11.0.2",
+    "cli-progress": "^3.12.0",
+    "colors": "^1.4.0",
+    "createfonts": "workspace:^",
+    "dayjs": "^1.11.10",
+    "ffcreator": "^7.2.2",
+    "fs-extra": "^11.1.1",
+    "glob": "^10.3.4",
+    "image-size": "^1.0.2",
+    "lint-staged": "^15.0.2",
+    "lodash": "^4.17.21",
+    "pdf-lib": "^1.17.1",
+    "randomcolor": "^0.6.2",
+    "unbuild": "^2.0.0"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,js}": "eslint"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "printWidth": 100
+  }
+}
